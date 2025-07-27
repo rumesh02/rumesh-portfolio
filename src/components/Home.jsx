@@ -36,6 +36,7 @@ export default function Home() {
                     Rumesh Thisaranga
                   </span>
                 </h1>
+                
                 <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light">
                   Full-Stack Developer & UI Designer
                 </p>
@@ -67,6 +68,7 @@ export default function Home() {
             <div className="flex gap-6 pt-4">
               <a 
                 href="https://github.com/rumesh02" 
+                target='_blank'
                 className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transform hover:scale-110 transition-all duration-300"
                 aria-label="GitHub"
               >
@@ -76,6 +78,7 @@ export default function Home() {
               </a>
               <a 
                 href="https://www.linkedin.com/in/rumeshthisaranga" 
+                target='_blank'
                 className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transform hover:scale-110 transition-all duration-300"
                 aria-label="LinkedIn"
               >
@@ -92,7 +95,7 @@ export default function Home() {
             <div className="relative">
               {/* Diagonal background */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-slate-600 rounded-3xl transform rotate-3 scale-105"></div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 rounded-3xl transform -rotate-2 scale-95 opacity-70"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 rounded-3xl transform -rotate-6 scale-95 opacity-70"></div>
               
               {/* Photo container */}
               <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-500 w-80 h-80">
@@ -109,9 +112,7 @@ export default function Home() {
               </div>
 
               {/* Floating elements */}
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-indigo-400/80 rounded-full flex items-center justify-center animate-pulse">
-                <span className="text-xl">🚀</span>
-              </div>
+              
             </div>
           </div>
         </div>
