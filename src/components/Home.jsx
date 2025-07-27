@@ -8,7 +8,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 lg:pt-0">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-50 dark:from-gray-900 dark:via-blue-900 dark:to-slate-900"></div>
       
@@ -20,29 +20,30 @@ export default function Home() {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-5rem)] lg:min-h-[80vh]">
           {/* Left side - Text content */}
-          <div className={`space-y-8 transform transition-all duration-1000 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
-            <div className="space-y-4">
+          <div className={`space-y-6 lg:space-y-8 transform transition-all duration-1000 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+            <div className="space-y-3 lg:space-y-4">
               <div className="inline-block">
-                <span className="text-lg font-medium text-gray-600 dark:text-gray-400 tracking-wide">
+                <span className="text-base lg:text-lg font-medium text-gray-600 dark:text-gray-400 tracking-wide">
                   Hi! I am,
                 </span>
               </div>
               
               <div className="space-y-2">
-                <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
                   <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-600 bg-clip-text text-transparent">
                     Rumesh Thisaranga
                   </span>
                 </h1>
-                <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light">
+                
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light">
                   Full-Stack Developer & UI Designer
                 </p>
               </div>
               
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
-                I create beautiful, functional, and user-centered digital experiences that bring ideas to life through clean code and thoughtful design.
+              <p className="text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
+                With a focus on usability and performance, I design and build digital solutions that merge software engineering with thoughtful design.
               </p>
             </div>
 
@@ -67,6 +68,7 @@ export default function Home() {
             <div className="flex gap-6 pt-4">
               <a 
                 href="https://github.com/rumesh02" 
+                target='_blank'
                 className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transform hover:scale-110 transition-all duration-300"
                 aria-label="GitHub"
               >
@@ -76,6 +78,7 @@ export default function Home() {
               </a>
               <a 
                 href="https://www.linkedin.com/in/rumeshthisaranga" 
+                target='_blank'
                 className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transform hover:scale-110 transition-all duration-300"
                 aria-label="LinkedIn"
               >
@@ -88,14 +91,14 @@ export default function Home() {
           </div>
 
           {/* Right side - Photo with diagonal design */}
-          <div className={`relative transform transition-all duration-1000 delay-300 ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-            <div className="relative">
+          <div className={`relative transform transition-all duration-1000 delay-300 ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} order-first lg:order-last`}>
+            <div className="relative flex justify-center">
               {/* Diagonal background */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-slate-600 rounded-3xl transform rotate-3 scale-105"></div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 rounded-3xl transform -rotate-2 scale-95 opacity-70"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 rounded-3xl transform -rotate-6 scale-95 opacity-70"></div>
               
               {/* Photo container */}
-              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-500 w-80 h-80">
+              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-4 lg:p-6 shadow-2xl transform hover:scale-105 transition-transform duration-500 w-64 h-64 md:w-80 md:h-80">
                 <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-2xl flex items-center justify-center overflow-hidden">
                   {/* Placeholder for photo - you'll replace this with your actual photo */}
                   <div className="text-center p-4">
@@ -106,11 +109,6 @@ export default function Home() {
                     />
                   </div>
                 </div>
-              </div>
-
-              {/* Floating elements */}
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-indigo-400/80 rounded-full flex items-center justify-center animate-pulse">
-                <span className="text-xl">🚀</span>
               </div>
             </div>
           </div>

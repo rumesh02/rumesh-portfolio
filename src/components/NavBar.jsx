@@ -29,7 +29,7 @@ export default function NavBar() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20' 
+        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-lg border-b border-gray-200/20 dark:border-gray-700/20' 
         : 'bg-transparent'
     }`}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
