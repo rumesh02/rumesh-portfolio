@@ -12,7 +12,7 @@ export default function App() {
       <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
         <NavBar />
 
-        <main className="max-w-6xl mx-auto px-4">
+        <main>
           <Home />
           <About />
           <Education />
