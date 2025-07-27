@@ -26,8 +26,8 @@ export default function About() {
     { name: "JavaScript", level: 85, color: "from-yellow-500 to-orange-500" },
     { name: "Node.js", level: 80, color: "from-green-500 to-emerald-500" },
     { name: "Python", level: 75, color: "from-indigo-500 to-slate-500" },
-    { name: "TypeScript", level: 70, color: "from-blue-600 to-blue-400" },
-    { name: "Tailwind CSS", level: 95, color: "from-teal-500 to-cyan-500" },
+    { name: "Java", level: 70, color: "from-blue-600 to-blue-400" },
+    { name: "MongoDB", level: 95, color: "from-teal-500 to-cyan-500" },
   ];
 
   return (
@@ -74,16 +74,13 @@ export default function About() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center p-6 bg-white/50 dark:bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/20">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">10+</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Projects</div>
                 </div>
+                
                 <div className="text-center p-6 bg-white/50 dark:bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/20">
-                  <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">3+</div>
+                  <div className="text-3xl font-bold text-green-600 dark:text-green-400">2+</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Years</div>
-                </div>
-                <div className="text-center p-6 bg-white/50 dark:bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/20">
-                  <div className="text-3xl font-bold text-green-600 dark:text-green-400">20+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Clients</div>
                 </div>
               </div>
 
