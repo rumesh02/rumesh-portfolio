@@ -30,14 +30,14 @@ export default function Home() {
                 </span>
               </div>
               
-              <div className="space-y-2">
+              <div className="space-y-5">
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
                   <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-600 bg-clip-text text-transparent">
                     Rumesh Thisaranga
                   </span>
                 </h1>
                 
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light">
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light mt-4">
                   Full-Stack Developer & UI Designer
                 </p>
               </div>
