@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Education from "./components/Education";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+        <NavBar />
+
+        <main className="max-w-6xl mx-auto px-4">
+          <Home />
+          <About />
+          <Education />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
-
-export default App;
