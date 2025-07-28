@@ -26,6 +26,21 @@ export default function NavBar() {
     setOpen(false);
   };
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.substring(1); // Remove the '#' from href
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    
+    setOpen(false);
+  };
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled 
@@ -55,6 +70,7 @@ export default function NavBar() {
             <li key={link.href}>
               <a
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-all duration-300 font-medium"
               >
                 {link.label}
@@ -86,6 +102,7 @@ export default function NavBar() {
           {/* Contact CTA */}
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, '#contact')}
             className="hidden md:block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-medium hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Contact Me
@@ -130,7 +147,7 @@ export default function NavBar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={onLinkClick}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 rounded-lg transition-all duration-300 font-medium"
                 >
                   {link.label}
@@ -140,7 +157,7 @@ export default function NavBar() {
             <li className="pt-4">
               <a
                 href="#contact"
-                onClick={onLinkClick}
+                onClick={(e) => handleNavClick(e, '#contact')}
                 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-300"
               >
                 Contact Me
